@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'elso';
+  szam:number
+
+  constructor(){
+    this.szam=5
+  }
+  novel(){
+    this.szam++;
+  }
+  csokkent(){
+    this.szam--;
+  }
 }

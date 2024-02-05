@@ -1,0 +1,30 @@
+<!-- {{ekszerek|json}} -->
+
+<div class="row">
+    <div *ngFor="let oszlop of oszlopok" class="col">
+        {{oszlop}}
+    </div>
+    <div class="col">
+        Actions
+    </div>
+</div>
+
+<div  class="row">
+    <div *ngFor="let oszlop of oszlopok" class="col">
+        <input [(ngModel)]="ujEkszer[oszlop]" type="text" class="form-control">
+    </div>
+    <div class="col">
+        <button (click)="postEkszer()" type="button" class="btn btn-primary">Add</button>
+    </div>
+</div>
+
+<div *ngFor="let ekszer of ekszerek" class="row">
+    <div *ngFor="let oszlop of oszlopok" class="col">
+        <input [(ngModel)]="ekszer[oszlop]" type="text" class="form-control">
+      
+    </div>
+    <div class="col">
+        <button (click)="saveEkszer(ekszer)" type="button" class="btn btn-primary">Save</button>
+        <button (click)="deleteEkszer(ekszer)" type="button" class="btn btn-primary">Deletey</button>
+    </div>
+</div>
